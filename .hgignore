@@ -1,8 +1,0 @@
-syntax: glob
-_ReSharper.AlarmerTest1/
-AlarmerTest1/obj/
-AlarmerTest1/bin/
-AlarmerTest1.v11.suo
-AlarmerTest1.v12.suo
-AlarmerTest1/Resources/Thumbs.db
-packages/*
