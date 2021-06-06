@@ -1,0 +1,46 @@
+﻿<Window x:Class="AlarmerTest1.Views.AddOrEditAlarmView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        Language="ru-RU"
+        Width="300" SizeToContent="Height" >
+  <StackPanel Margin="10">
+    <Grid >
+      <Grid.RowDefinitions>
+        <RowDefinition Height="30"/>
+        <RowDefinition Height="30"/>
+        <RowDefinition Height="50"/>
+        <RowDefinition Height="30"/>
+        <RowDefinition Height="80"/>
+        <RowDefinition Height="40"/>
+      </Grid.RowDefinitions>
+      <TextBlock VerticalAlignment="Center">Дата и время первого срабатывания</TextBlock>
+      <DatePicker Grid.Row="1" Margin="10,0,0,0" Width="120" VerticalAlignment="Center" HorizontalAlignment="Left"
+                  SelectedDate="{Binding AlarmInWork.BasicAlarmTime, Mode=TwoWay}"/>
+      <TextBox Grid.Row="1" Margin="0,0,10,0" HorizontalAlignment="Right" Width="100" VerticalAlignment="Center"
+               Text="{Binding AlarmTime, Mode=TwoWay}"/>
+      <CheckBox IsChecked="{Binding AlarmInWork.IsRegularEvent}" Grid.Row="2" VerticalAlignment="Center">
+        <ContentControl>
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition/>
+              <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="  Событие повторяется" Grid.Row="0"/>
+            <TextBlock Text="  регулярно?" HorizontalAlignment="Center" Grid.Row="1"/>
+          </Grid>
+        </ContentControl>
+      </CheckBox>
+
+      <ComboBox Name="Periods" ItemsSource="{Binding PeriodList}" SelectedItem="{Binding AlarmInWork.Period}" IsEnabled="{Binding AlarmInWork.IsRegularEvent}"
+                Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center" Width="100" Height="24"/>
+
+      <TextBlock Grid.Row="3" VerticalAlignment="Center">Сообщение</TextBlock>
+      <TextBox Text="{Binding AlarmInWork.Subject}" Grid.Row="4" Height="72"/>
+
+      <Button Name="SaveNewAlarm" Grid.Row="5" HorizontalAlignment="Left" Width="100" Height="24" VerticalAlignment="Bottom" 
+              Content="Сохранить" Margin="15,3"/>
+      <Button Name="Cancel" Grid.Row="5" HorizontalAlignment="Right" Width="100" Height="24" VerticalAlignment="Bottom" 
+              Content="Отказаться" IsCancel="True" Margin="15,3"/>
+    </Grid>
+  </StackPanel>
+</Window>

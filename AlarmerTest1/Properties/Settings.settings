@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AlarmerTest1.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="HomeAlarmListPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:\Users\Leanid\Dropbox\Alarmer</Value>
+    </Setting>
+    <Setting Name="OfficeListName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">AlarmListOffice.txt</Value>
+    </Setting>
+    <Setting Name="HomeListName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">AlarmListHome.txt</Value>
+    </Setting>
+    <Setting Name="DataForHome" Type="System.String" Scope="User">
+      <Value Profile="(Default)">dataForHome.</Value>
+    </Setting>
+    <Setting Name="DataForOffice" Type="System.String" Scope="User">
+      <Value Profile="(Default)">dataForOffice.</Value>
+    </Setting>
+    <Setting Name="PermissionForOffice" Type="System.String" Scope="User">
+      <Value Profile="(Default)">permissionForOffice.</Value>
+    </Setting>
+    <Setting Name="PermissionForHome" Type="System.String" Scope="User">
+      <Value Profile="(Default)">permissionForHome.</Value>
+    </Setting>
+    <Setting Name="OfficeAlarmListPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:\Users\mli2805\Dropbox\Alarmer</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

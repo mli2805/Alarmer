@@ -1,0 +1,68 @@
+﻿<Window x:Class="AlarmerTest1.Views.ShellView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                xml:lang="ru-RU"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Icon="/AlarmerTest1;component/Resources/alarmer.ico" 
+        xmlns:tb="clr-namespace:Hardcodet.Wpf.TaskbarNotification;assembly=Hardcodet.Wpf.TaskbarNotification"
+        xmlns:cal="http://www.caliburnproject.org"
+        Height="1" Width="1" Visibility="Hidden"
+        >
+  <Grid>
+    <tb:TaskbarIcon x:Name="myNotifyIcon" Visibility="Visible" IconSource="/Resources/alarmer.ico" MenuActivation="LeftOrRightClick">
+      <tb:TaskbarIcon.TrayToolTip>
+        <Border Background="Black" BorderBrush="Orange" BorderThickness="2" CornerRadius="4" Opacity="0.8" Width="150" Height="70">
+          <ContentControl Foreground="Yellow">
+            <Grid>
+              <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+              </Grid.RowDefinitions>
+              <TextBlock Text="Напоминалка" HorizontalAlignment="Center" VerticalAlignment="Center" />
+              <TextBlock Grid.Row="1" Text="MLI (c) ver.  0.95 " HorizontalAlignment="Center" VerticalAlignment="Center" />
+              <TextBlock Grid.Row="2" Text="{Binding EventsCount}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+          </ContentControl>
+        </Border>
+      </tb:TaskbarIcon.TrayToolTip>
+      <tb:TaskbarIcon.ContextMenu>
+        <ContextMenu>
+          <MenuItem Header="Список для офиса" cal:Message.Attach="ShowAllOffice">
+            <MenuItem.Icon>
+              <Image Source="..\Resources/atWork.ico" Width="16"/>
+            </MenuItem.Icon>
+          </MenuItem>
+          <MenuItem Header="Добавить для офиса" cal:Message.Attach="AddNewOffice">
+            <MenuItem.Icon>
+              <Image Source="..\Resources/plus16.ico" Width="16"/>
+            </MenuItem.Icon>
+          </MenuItem>
+          <Separator Style="{DynamicResource Separator}"/>
+          <MenuItem Header="Список для дома" cal:Message.Attach="ShowAllHome">
+            <MenuItem.Icon>
+              <Image Source="..\Resources/atHome.ico" Width="16"/>
+            </MenuItem.Icon>
+          </MenuItem>
+          <MenuItem Header="Добавить для дома" cal:Message.Attach="AddNewHome">
+            <MenuItem.Icon>
+              <Image Source="..\Resources/plus16.ico" Width="16"/>
+            </MenuItem.Icon>
+          </MenuItem>
+          <Separator Style="{DynamicResource Separator}"/>
+          <MenuItem Header="Настройки" ToolTip="{Binding WorkingDirectory}">
+            <MenuItem.Icon>
+              <Image Source="..\Resources/settings.ico" Width="16"/>
+            </MenuItem.Icon>
+          </MenuItem>
+          <MenuItem Header="Выгрузить из памяти" cal:Message.Attach="ExitApplication">
+            <MenuItem.Icon>
+              <Image Source="..\Resources/redArrow.ico" Width="16"/>
+            </MenuItem.Icon>
+          </MenuItem>
+        </ContextMenu>
+      </tb:TaskbarIcon.ContextMenu>
+    </tb:TaskbarIcon>
+  </Grid>
+
+
+</Window>
