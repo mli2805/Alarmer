@@ -3,6 +3,8 @@
   public enum RepetitionPeriods
   {
     EveryDay,
+    EveryWeekDay,
+    EveryDayOff,
     EveryWeek,
     EveryMonth,
     EveryYear

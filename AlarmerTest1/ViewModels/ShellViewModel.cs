@@ -47,7 +47,7 @@ namespace AlarmerTest1.ViewModels
 
         public ShellViewModel()
         {
-            _isAtHome = Environment.MachineName != "opx-lmarholin2".ToUpper();
+            _isAtHome = Environment.MachineName != "opx-lmarholin4".ToUpper();
             var dropboxPath = _isAtHome ? Settings.Default.HomeAlarmListPath : Settings.Default.OfficeAlarmListPath;
             _homeFile = Path.Combine(dropboxPath, Settings.Default.HomeListName);
             _officeFile = Path.Combine(dropboxPath, Settings.Default.OfficeListName);

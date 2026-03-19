@@ -12,7 +12,7 @@ namespace AlarmerTest1.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.7.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.10.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -25,7 +25,7 @@ namespace AlarmerTest1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("c:\\Users\\Leanid\\Dropbox\\Alarmer")]
+        [global::System.Configuration.DefaultSettingValueAttribute("d:\\Google Drive\\Alarmer")]
         public string HomeAlarmListPath {
             get {
                 return ((string)(this["HomeAlarmListPath"]));
@@ -109,7 +109,7 @@ namespace AlarmerTest1.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("c:\\Users\\mli2805\\Dropbox\\Alarmer")]
+        [global::System.Configuration.DefaultSettingValueAttribute("d:\\Google Drive\\Alarmer")]
         public string OfficeAlarmListPath {
             get {
                 return ((string)(this["OfficeAlarmListPath"]));
